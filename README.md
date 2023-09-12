@@ -39,8 +39,14 @@ To install CellContrast, you may set up the conda environment by pytorch.yml fil
 
 ## Usage
 
-The CellContrast 
 
+CellContrast contains 3 main moduels: train, eval and inference, for training model, benchmarking evaluation and inference of spatial relationships, respectively. To check available modules, run:
+
+```bash
+ 
+ python cellContrast.py -h
+ 
+```
 ### Model training
 The model can be trained with the following command:
 ```bash
