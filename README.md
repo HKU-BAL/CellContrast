@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit/) 
 
 Contact: Yuanhua Huang, Ruibang Luo, Shumin Li
+
 Email:  yuanhua@hku.hk, rbluo@cs.hku.hk, lishumin@connect.hku.hk
 
 ## Introduction
@@ -23,9 +24,9 @@ cells demonstrate higher similarities. To achieve this, cellContrast employs a c
 - [Latest Updates](#latest-updates)
 - [Installations](#installation)
 - [Usage](#usage)
-    -[Model training](#model-training)
-    -[Performance evaluation](#performance-evaluation)
-    -[Spatial inference](#spatial-inference)
+    - [Model training](#model-training)
+    - [Performance evaluation](#performance-evaluation)
+    - [Spatial inference](#spatial-inference)
    
 
 ## Latest Updates
