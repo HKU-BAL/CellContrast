@@ -1,0 +1,13 @@
+{
+    "n_encoder_hidden": 1024,
+    "n_encoder_latent": 512,
+    "n_encoder_layers": 2,
+    "n_projection_hidden": 256,
+    "n_projection_output": 128,
+    "dropout_rate": 0,
+    "training_epoch": 30,
+    "inital_learning_rate": 0.1,
+    "k_nearest_positives": 80,
+    "batch_size": 64,
+    "temperature": 0.05
+}
