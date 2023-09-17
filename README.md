@@ -33,7 +33,7 @@ cells demonstrate higher similarities. To achieve this, cellContrast employs a c
 * v0.1 (Sep, 2023): Initial release.
 ---
 ## Installation
-To install CellContrast, you may set up the conda environment by pytorch.yml file
+To install CellContrast, python 3.9 is required and you may set up the conda environment by pytorch.yml file
 
     conda env create -f pytorch.yml
 
