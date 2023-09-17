@@ -3,11 +3,9 @@ import anndata as ad
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import squidpy as sq
 import numpy as np
 from sklearn.neighbors import KDTree
 import random
-from torchsummary import summary
 import numpy as np
 from random import choice
 from tqdm import tqdm

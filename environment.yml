@@ -1,0 +1,16 @@
+name: cellContrast
+channels:
+  - defaults
+  - nvidia
+  - anaconda
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch==1.12.0
+  - cudatoolkit=11.6
+  - torchvision==0.13.0
+  - torchaudio==0.12.0
+  - scanpy==1.9.3  
+
