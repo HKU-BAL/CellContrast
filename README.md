@@ -33,9 +33,26 @@ cells demonstrate higher similarities. To achieve this, cellContrast employs a c
 * v0.1 (Sep, 2023): Initial release.
 ---
 ## Installation
-To install CellContrast, python 3.9 is required and you may set up the conda environment by pytorch.yml file
+To install CellContrast, python 3.9 is required and follow the instruction
+1. Install <a href="https://docs.conda.io/projects/miniconda/en/latest/" target="_blank">Miniconda3</a> if not already available.
+2. Clone this repository:
+```bash
+  git clone https://github.com/HKU-BAL/CellContrast
+```
+3. Navigate to `CellContrast` directory:
+```bash
+  cd CellContrast
+```
+4. (5-10 minutes) Create a conda environment with the required dependencies:
+```bash
+  conda env create -f pytorch.yml
+```
 
-    conda env create -f pytorch.yml
+5. Activate the `pytorch` environment you just created:
+```bash
+  conda activate pytorch
+``` 
+
 
 ## Usage
 
