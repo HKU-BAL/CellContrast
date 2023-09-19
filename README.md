@@ -101,9 +101,11 @@ python cellContrast.py inference \
 --model_folder \                     ## folder of trained model
 --parameter_file parameters.json \ ## uparameters of trained model
 --save_path spatial_reconstructed_sc.h5ad \ ## path of of the spatial reconstructed SC data
+--enable_denovo \ ## optional, run MDS to leverage the SC-SC pairwise distance to 2D pseudo space
 
-## Output file: spatially reconstructed h5ad file of annData, with pairwise cosine similarities of inferred representations, referenced coordinates, and de novo coordinates in uns.
+## Output file: spatially reconstructed h5ad file of annData
 ```
+* what will be newly added in `sptial_reconstructed_sc.h5ad`:`.uns[['cosine sim of rep','representation','referenced x','referenced y','de novo x','de novo y']]` 
 
 
 
