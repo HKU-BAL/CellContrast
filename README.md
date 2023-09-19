@@ -48,7 +48,7 @@ To install CellContrast, python 3.9 is required and follow the instruction
   conda env create -f environment.yml
 ```
 
-5. Activate the `pytorch` environment you just created:
+5. Activate the `cellContrast` environment you just created:
 ```bash
   conda activate cellContrast
 ``` 
@@ -65,7 +65,7 @@ CellContrast contains 3 main moduels: train, eval and inference, for training mo
  
 ```
 ### Model training
-The model can be trained with the following command:
+CellContrast model was trained based on ST data (which should be in [AnnData](https://anndata.readthedocs.io/en/latest/) format, with truth locations in .obs[['x','y']]). The model can be trained with the following command:
 ```bash
 
 python cellContrast.py train \
