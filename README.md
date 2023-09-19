@@ -1,5 +1,7 @@
 
-# CellContrast
+<div align="center">
+    <img src="images/cellContrast_logo.png" width = "350" alt="cellContrast">
+</div>
 
 # CellContrast: Reconstructing Spatial Relationships in Single-Cell RNA Sequencing Data via Deep Contrastive Learning
 
