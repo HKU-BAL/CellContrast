@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 results/
 .ipynb_checkpoints/
+.DS_Store
