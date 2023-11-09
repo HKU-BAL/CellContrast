@@ -8,8 +8,5 @@ channels:
   - defaults
 dependencies:
   - python=3.9
-  - pytorch==1.12.0
-  - cudatoolkit=11.6
-  - torchvision==0.13.0
   - pip:
     - scanpy==1.9.3
