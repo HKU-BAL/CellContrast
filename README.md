@@ -49,8 +49,11 @@ To install CellContrast, python 3.9 is required and follow the instruction
 ```bash
   conda env create -f environment.yml
 ```
-
-5. Activate the `cellContrast` environment you just created:
+5. Install **pytorch**: You may refer to [pytorch installtion](https://pytorch.org/get-started/locally/) as needed. For example, the command of installing a **cpu-only** pytorch is:
+```bash
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+```
+6. Activate the `cellContrast` environment you just created:
 ```bash
   conda activate cellContrast
 ``` 
