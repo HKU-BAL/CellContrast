@@ -16,6 +16,10 @@ Email:  yuanhua@hku.hk, rbluo@cs.hku.hk, lishumin@connect.hku.hk
 CellContrast reconstructs the spatial relationships for single-cell RNA sequencing (SC) data. Its fundamental assumption is that gene expression profiles can be projected into a latent space, where physically proximate 
 cells demonstrate higher similarities. To achieve this, cellContrast employs a contrastive learning framework of an encoder-projector structure. The model was trained with spatial transcriptomics (ST) data and applied to SC data for obtaining the spatially-related representations. The produced results of cellContrast can be used in multiple down-stream tasks that requires spatial information, such as cell-type co-localization and cell-cell communications.
 
+A preprint describing CellContrast's algorithms and results is at [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.10.12.562026v1).
+
+
+
 ![](./images/Figure1.png)
 
 ---
