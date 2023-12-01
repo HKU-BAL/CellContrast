@@ -3,8 +3,8 @@ import sys
 from importlib import import_module
 
 
-data_preprocess_modules = ["normalization"]
-deep_learning_modules = ["train","eval","inference"]
+data_preprocess_modules = [""]
+deep_learning_modules = ["reconstruct","train","eval","inference"]
 
 
 DEEP_LEARNING_FOLDER = "cellContrast"

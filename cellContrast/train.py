@@ -9,7 +9,9 @@ import torch
 import numpy as np
 from tqdm import tqdm
 import time
+import logging
 
+logging.getLogger().setLevel(logging.INFO)
 
 sample_field_name = 'embryo'
 
@@ -39,9 +41,9 @@ def save_model(args,model,params,optimizer,LOSS,train_genes):
     
 
 
-def train_model(args):
+def train_model(args,train_adata=None):
     
-    print("train model")
+    logging.info("Training cellContrast model")
     
     
     # load parameter settings
@@ -49,8 +51,13 @@ def train_model(args):
         params = json.load(json_file)
     print("parameters",params)
     
-    # load data
-    train_adata = sc.read_h5ad(args.train_data_path)
+    
+    
+    # load data if necessary
+    if(not train_adata):
+        logging.info("Load training data")
+        train_adata = sc.read_h5ad(args.train_data_path)
+    
     if(sample_field_name in train_adata.obs):
         train_sample_number = train_adata.obs[sample_field_name].unique().shape[0]
     else:
@@ -72,6 +79,8 @@ def train_model(args):
         dev = "cuda:0"
     else:
         dev = "cpu"
+    logging.info("Using device %s" %(dev))
+    
     device = torch.device(dev)
     
     
@@ -131,6 +140,7 @@ def train_model(args):
     
     # Save the last model
     save_model(args,model,params,optimizer,LOSS,train_genes)
+    return model
     
     
     
@@ -143,11 +153,18 @@ def main():
     
     parser.add_argument('--train_data_path', type=str,
                         help="The path of training data with h5ad format (annData object)")
+    
     parser.add_argument('--save_folder', type=str,
                         help="Save folder of model related files, default:'./cellContrast_models'",default="./cellContrast_models")
     
     parser.add_argument('--parameter_file_path', type=str,
-                        help="Path of parameter settings, default:'./parameters.json'",default="./parameters.json")
+                        help="Path of parameter settings, customize it based on reference ST\
+                        default:'./parameters/parameters_spot.json'",default="./parameters/parameters_spot.json")
+    
+    parser.add_argument('-sc','--single_cell',\
+                        help="default:false, set this flag will swithing to the single-cell resolution ST mode, which uses the predefined './parameters/parameters_singleCell.json'",\
+                        action='store_true')
+    
     
     
     args = parser.parse_args()
@@ -156,10 +173,16 @@ def main():
         parser.print_help()
         sys.exit(1)
     
-    # check parameters
+    # check arguments
     if(not os.path.exists(args.train_data_path)):
         print("train data not exists!")
         sys.exit(1)
+    
+    # check the parameter files
+    if(args.single_cell):
+        # change the parameter settings to the single-cell mode unless users have customized it.
+        args.parameter_file_path = "./parameters/parameters_singleCell.json"
+        
     
     if(not os.path.exists(args.parameter_file_path)):
         print("parameter file not exists!")

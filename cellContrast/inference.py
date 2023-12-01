@@ -159,7 +159,8 @@ def main():
     parser.add_argument('--model_folder', type=str,
                         help="Save folder of model related files, default:'./cellContrast_models'",default="./cellContrast_models")
     parser.add_argument('--parameter_file_path', type=str,
-                        help="Path of parameter settings, default:'./parameters.json'",default="./parameters.json")
+                        help="Please take the parameter file you used in the training phase,\
+                        default:'./parameters/parameters_spot.json'",default="./parameters/parameters_spot.json")
     parser.add_argument('--ref_data_path',type=str, help="reference ST data, used in generating the coordinates of SC data as the reference, usually should be the training data of the model")
     
     # whether to enable de novo coordinates inference

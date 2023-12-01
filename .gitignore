@@ -5,4 +5,5 @@ __pycache__/
 *.pyc
 results/
 .ipynb_checkpoints/
+*_test.json
 .DS_Store

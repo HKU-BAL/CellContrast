@@ -78,7 +78,8 @@ def main():
     parser.add_argument('--model_folder', type=str,default="./cellContrast_models",
                         help="Save folder of model related files, default:'./cellContrast_models'")
     parser.add_argument('--parameter_file_path', type=str,
-                        help="Path of parameter settings, default:'./parameters.json'",default="./parameters.json")
+                        help="Please take the parameter file you used in the training phase,\
+                        default:'./parameters/parameters_spot.json'",default="./parameters/parameters_spot.json")
     
     parser.add_argument('--save_path',type=str,help="Save path of evaluation result",default="./result.csv")
     args = parser.parse_args()
