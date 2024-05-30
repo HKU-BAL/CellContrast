@@ -6,6 +6,7 @@
 # CellContrast: Reconstructing Spatial Relationships in Single-Cell RNA Sequencing Data via Deep Contrastive Learning
 
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit/) 
+[![DOI](https://zenodo.org/badge/689623613.svg)](https://zenodo.org/doi/10.5281/zenodo.11395994)
 
 Contact: Yuanhua Huang, Ruibang Luo, Shumin Li
 
